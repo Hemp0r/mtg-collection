@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <th scope="row">{{ item["number"] }}</th>
+      <td>{{ item["name"] }}</td>
+      <td><img src="https://svgs.scryfall.io/sets/{{ item['setCode'] | lowercase }}.svg" /></td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>
